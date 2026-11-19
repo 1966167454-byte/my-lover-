@@ -1,0 +1,8 @@
+name = "photo-vote"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "photo-vote-db"
+database_id = "de00ef27-1750-4802-afd0-bf27cb06ef88"
