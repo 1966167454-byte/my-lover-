@@ -7,3 +7,4 @@ tmp
 *.log
 votes.json
 photos/p33/
+.data/

@@ -8,7 +8,11 @@ const path = require('path');
 
 const ROOT = __dirname;
 const PORT = Number(process.env.PORT) || 3000;
-const VOTES_FILE = path.join(ROOT, 'votes.json');
+// Glitch 等平台提供持久化目录 .data；本地无该目录时直接用项目根目录
+const DATA_DIR = fs.existsSync(path.join(ROOT, '.data'))
+  ? path.join(ROOT, '.data')
+  : ROOT;
+const VOTES_FILE = path.join(DATA_DIR, 'votes.json');
 const MAX_VOTES = 3;
 
 // 读取选手清单
@@ -28,6 +32,7 @@ function loadVotes() {
 }
 
 function saveVotes(votes) {
+  fs.mkdirSync(path.dirname(VOTES_FILE), { recursive: true });
   fs.writeFileSync(VOTES_FILE, JSON.stringify(votes, null, 2), 'utf8');
 }
 
