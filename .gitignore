@@ -1,0 +1,9 @@
+node_modules
+.env
+data
+backups
+logs
+tmp
+*.log
+votes.json
+photos/p33/

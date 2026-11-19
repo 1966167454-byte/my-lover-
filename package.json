@@ -1,0 +1,13 @@
+{
+  "name": "hkdx-autumn-photo-vote",
+  "version": "1.0.0",
+  "description": "河南科技大学信息工程学院秋季摄影照片征集投票",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
